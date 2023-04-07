@@ -1,5 +1,5 @@
 class Api::MessagesController < ApplicationController
-  before_action :set_message, only: %i[ show update destroy ]
+  before_action :set_message, only: %i[show update destroy]
 
   def random
     @message = Message.order('RANDOM()').first
