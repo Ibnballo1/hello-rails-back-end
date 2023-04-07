@@ -2,8 +2,8 @@ class Api::MessagesController < ApplicationController
   before_action :set_message, only: %i[ show update destroy ]
 
   def random
-    @greeting = Greeting.order('RANDOM()').first
-    render json: @greeting
+    @message = Message.order('RANDOM()').first
+    render json: @message
   end
 
   # GET /messages
